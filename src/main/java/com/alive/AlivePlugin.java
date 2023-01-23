@@ -29,7 +29,7 @@ import net.runelite.client.util.Text;
 
 @Slf4j
 @PluginDescriptor(
-	name = "Alive"
+	name = "Time Alive"
 )
 public class AlivePlugin extends Plugin
 {
@@ -68,8 +68,6 @@ public class AlivePlugin extends Plugin
 		overlayManager.add(aliveoverlay);
 		selectedNPCs = getSelectedNPCs();
 		rebuildAllNPCs();
-
-		log.info("Alive started!");
 	}
 
 
@@ -78,8 +76,6 @@ public class AlivePlugin extends Plugin
 	{
 		overlayManager.remove(aliveoverlay);
 		aliveNPCs.clear();
-
-		log.info("Alive stopped!");
 	}
 
 	@Subscribe
